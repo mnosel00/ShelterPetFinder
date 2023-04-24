@@ -26,6 +26,12 @@ Jest to otwartoźródłowy projekt stworzony przez Microsoft.
 
 Programiści definiują modele obiektów, a EF Core tworzy schemat bazy danych z tych modeli.
 
+```
+// "Entity Framework Core in Action" autorstwa Jona Smitha
+ - rozdział 1: 
+"Introducing Entity Framework Core"
+```
+
 ### ASP.NET CORE
 
 .NET Core to otwarte oprogramowanie, które umożliwia tworzenie aplikacji internetowych, w tym REST API, na różnych systemach operacyjnych
@@ -33,6 +39,10 @@ Programiści definiują modele obiektów, a EF Core tworzy schemat bazy danych z
 REST API to interfejs programowania aplikacji, który umożliwia komunikację między różnymi systemami i aplikacjami za pomocą protokołu HTTP.
 
 ASP.NET Core to framework, który zapewnia narzędzia i biblioteki do budowania aplikacji internetowych i REST API.&#x20;
+
+```
+// "Building RESTful Web APIs with .NET Core" autorstwa Iriny Scurtu 
+```
 
 Ten modułowy framework oferuje wiele funkcji, takich jak obsługa żądań HTTP, routowanie, logowanie, autoryzacja i uwierzytelnianie, testowanie jednostkowe i wiele innych.
 
