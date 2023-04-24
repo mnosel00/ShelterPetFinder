@@ -18,7 +18,7 @@
 
 <details>
 
-<summary>Newtonsoft.Json</summary>
+<summary>JWT</summary>
 
 * biblioteka służąca do serializacji i deserializacji danych w formacie JSON.
 
@@ -77,6 +77,22 @@
 <summary>Vue-cli</summary>
 
 * narzędzie do generowania projektów Vue.js
+
+</details>
+
+<details>
+
+<summary>AutoMapper</summary>
+
+
+
+</details>
+
+<details>
+
+<summary>Microsoft.AspNetCore.Authentication.JwtBearer</summary>
+
+
 
 </details>
 
