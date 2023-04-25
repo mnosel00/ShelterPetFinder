@@ -51,7 +51,7 @@ Ten modułowy framework oferuje wiele funkcji, takich jak obsługa żądań HTTP
 </details>
 
 {% hint style="success" %}
-Zalety C#
+Zalety technologii
 {% endhint %}
 
 {% tabs %}
@@ -93,7 +93,7 @@ Dostarcza wiele narzędzi do testowania aplikacji, w tym narzędzia do generowan
 {% endtabs %}
 
 {% hint style="danger" %}
-Wady C#
+Wady technologii
 {% endhint %}
 
 {% tabs %}
