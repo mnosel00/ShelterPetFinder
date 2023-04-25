@@ -100,7 +100,7 @@ Wady technologii
 {% tab title="Kompleksowość " %}
 Jest dość złożonym narzędziem, co może powodować trudności dla początkujących użytkowników
 
-{% hint style="info" %}
+{% hint style="warning" %}
 C# wraz z EF Core wymaga znajomości języka LINQ oraz konfiguracji połączenia z bazą danych.
 {% endhint %}
 {% endtab %}
@@ -108,7 +108,7 @@ C# wraz z EF Core wymaga znajomości języka LINQ oraz konfiguracji połączenia
 {% tab title="Brak pełnej kontroli" %}
 Oferuje wiele domyślnych ustawień i ograniczeń, co może ograniczać kontrolę użytkownika nad aplikacją bazodanową
 
-{% hint style="info" %}
+{% hint style="warning" %}
 EF Core automatycznie generuje klucze główne dla tabel, co może prowadzić do problemów z kontrolią procesu tworzenia identyfikatorów rekordów.
 {% endhint %}
 {% endtab %}
@@ -116,7 +116,7 @@ EF Core automatycznie generuje klucze główne dla tabel, co może prowadzić do
 {% tab title="Problemy z migracją" %}
 może mieć problemy z migracją danych między różnymi wersjami bazy danych.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 EF Core może mieć trudności z migracją danych, jeśli baza danych została zmieniona poza narzędziem EF Core.
 {% endhint %}
 {% endtab %}
