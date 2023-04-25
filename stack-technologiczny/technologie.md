@@ -12,9 +12,53 @@ Vue.js
 
 </details>
 
+### C# - Backend
+
+{% hint style="success" %}
+Zalety C#
+{% endhint %}
+
+{% tabs %}
+{% tab title="Łatwość użycia" %}
+Zapewnia łatwy i prosty sposób tworzenia aplikacji bazodanowych.&#x20;
+
+{% hint style="info" %}
+W C# korzystając z wbudowanych frameworków wystarczy zdefiniować klasy reprezentujące modele danych, a EF Core automatycznie tworzy dla nich odpowiednie tabele w bazie danych.
+{% endhint %}
+{% endtab %}
+
+{% tab title="Wysoka wydajność" %}
+Język ten zapewnia wysoką wydajność i szybkość przetwarzania danych.
+
+{% hint style="info" %}
+EF Core wykorzystuje cache'owanie wyników, co pozwala na szybsze przetwarzanie zapytań do bazy danych.
+{% endhint %}
+{% endtab %}
+
+{% tab title="Wsparcie dla wielu baz danych" %}
+Obsługuje wiele popularnych baz danych, takich jak SQL Server, MySQL, Oracle, itp
+
+{% hint style="info" %}
+EF Core umożliwia tworzenie migracji do różnych baz danych, co ułatwia pracę z różnymi systemami baz danych.
+{% endhint %}
+{% endtab %}
+
+{% tab title="Bezpieczeństwo" %}
+Zapewnia wiele funkcji zabezpieczeń, między innymi walidacja danych i uwierzytelnianie użytkowników.
+
+{% hint style="info" %}
+umożliwia definiowanie ograniczeń dla danych w tabelach, co zwiększa bezpieczeństwo aplikacji bazodanowych.
+{% endhint %}
+{% endtab %}
+
+{% tab title="Łatwość testowania" %}
+Dostarcza wiele narzędzi do testowania aplikacji, w tym narzędzia do generowania danych testowych.
+{% endtab %}
+{% endtabs %}
+
 <details>
 
-<summary>C# - BACK</summary>
+<summary>Frameworki</summary>
 
 ### EF CORE
 
