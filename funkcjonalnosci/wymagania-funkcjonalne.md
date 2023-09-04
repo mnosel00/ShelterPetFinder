@@ -14,6 +14,46 @@ description: Wymagani funkcjonalne projektu ShelterDogFinder
 
 <details>
 
+<summary>Edycja profilu użytkownika</summary>
+
+
+
+</details>
+
+<details>
+
+<summary>Usunięcie profilu użytkownika</summary>
+
+
+
+</details>
+
+<details>
+
+<summary>Rejestracja schroniska</summary>
+
+
+
+</details>
+
+<details>
+
+<summary>Edycja profilu psa</summary>
+
+
+
+</details>
+
+<details>
+
+<summary>Usunięcie profilu psa</summary>
+
+
+
+</details>
+
+<details>
+
 <summary>Przeglądanie profili psów ze schronisk, wraz z informacjami o wieku, rasie, temperamencie i innych ważnych cechach </summary>
 
 
