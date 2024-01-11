@@ -14,3 +14,9 @@
 ## biblioteki
 
 * [🛠 Lista wymaganych zewnętrznych bibliotek](biblioteki/lista-wymaganych-zewnetrznych-bibliotek.md)
+
+***
+
+* [Dokumentacja](dokumentacja/README.md)
+  * [API](dokumentacja/api/README.md)
+    * [User](dokumentacja/api/user.md)
