@@ -1,0 +1,1538 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "API Aplikacji ShelterPetFinder",
+        "version": "1.0"
+    },
+    "servers": [
+      {
+        "url": "shelterpetfinder.azurewebsites.net"
+      }
+    ],
+    "paths": {
+        "/Pet/Add": {
+            "post": {
+                "tags": [
+                    "Pet"
+                ],
+                "summary": "AddPet",
+                "operationId": "AddPet",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "Id": {
+                                        "type": "integer",
+                                        "description": "Format - int32."
+                                    },
+                                    "Name": {
+                                        "type": "string"
+                                    },
+                                    "images[]": {
+                                        "type": "array"
+                                    },
+                                    "Type": {
+                                        "type": "string"
+                                    },
+                                    "Gender": {
+                                        "type": "string"
+                                    },
+                                    "Castration": {
+                                        "type": "string"
+                                    },
+                                    "Breed": {
+                                        "type": "string"
+                                    },
+                                    "Size": {
+                                        "type": "string"
+                                    },
+                                    "Age": {
+                                        "type": "string"
+                                    },
+                                    "Vaccination": {
+                                        "type": "string"
+                                    },
+                                    "ChildFriendly": {
+                                        "type": "string"
+                                    },
+                                    "BasicTraining": {
+                                        "type": "string"
+                                    },
+                                    "Activity": {
+                                        "type": "string"
+                                    },
+                                    "OtherDogs": {
+                                        "type": "string"
+                                    },
+                                    "OtherCats": {
+                                        "type": "string"
+                                    },
+                                    "Cuddly": {
+                                        "type": "string"
+                                    },
+                                    "Temper": {
+                                        "type": "string"
+                                    },
+                                    "Text": {
+                                        "type": "string"
+                                    },
+                                    "ShelterEmail": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Pet/Update": {
+            "put": {
+                "tags": [
+                    "Pet"
+                ],
+                "summary": "UpdatePet",
+                "operationId": "UpdatePet",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "Id": {
+                                        "type": "integer",
+                                        "description": "Format - int32."
+                                    },
+                                    "Name": {
+                                        "type": "string"
+                                    },
+                                    "images[]": {
+                                        "type": "array"
+                                    },
+                                    "Type": {
+                                        "type": "string"
+                                    },
+                                    "Gender": {
+                                        "type": "string"
+                                    },
+                                    "Castration": {
+                                        "type": "string"
+                                    },
+                                    "Breed": {
+                                        "type": "string"
+                                    },
+                                    "Size": {
+                                        "type": "string"
+                                    },
+                                    "Age": {
+                                        "type": "string"
+                                    },
+                                    "Vaccination": {
+                                        "type": "string"
+                                    },
+                                    "ChildFriendly": {
+                                        "type": "string"
+                                    },
+                                    "BasicTraining": {
+                                        "type": "string"
+                                    },
+                                    "Activity": {
+                                        "type": "string"
+                                    },
+                                    "OtherDogs": {
+                                        "type": "string"
+                                    },
+                                    "OtherCats": {
+                                        "type": "string"
+                                    },
+                                    "Cuddly": {
+                                        "type": "string"
+                                    },
+                                    "Temper": {
+                                        "type": "string"
+                                    },
+                                    "Text": {
+                                        "type": "string"
+                                    },
+                                    "ShelterEmail": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Pet/GetAllPets": {
+            "get": {
+                "tags": [
+                    "Pet"
+                ],
+                "summary": "GetAllPetsFromDb",
+                "operationId": "GetAllPetsFromDb",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Pet/Delete": {
+            "delete": {
+                "tags": [
+                    "Pet"
+                ],
+                "summary": "DeletePet",
+                "operationId": "DeletePet",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Format - int32.",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Shelter/DetailsForm": {
+            "post": {
+                "tags": [
+                    "Shelter"
+                ],
+                "summary": "AddShelterDetailsForm",
+                "operationId": "AddShelterDetailsForm",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ShelterForm"
+                            },
+                            "example": {
+                                "name": "string",
+                                "email": "string",
+                                "phone": "string",
+                                "postCode": "string",
+                                "town": "string",
+                                "adress": "string",
+                                "url": "string",
+                                "incomeSource": true,
+                                "lifestyle": true,
+                                "housingType": true,
+                                "houseOwner": true,
+                                "hoursAlone": true,
+                                "floor": true,
+                                "elevator": true,
+                                "walksNumber": true,
+                                "walksTime": true,
+                                "fence": true,
+                                "fenceHeight": true,
+                                "propertySize": true,
+                                "petPlace": true,
+                                "petPlaceAlone": true,
+                                "careAlone": true,
+                                "houseMates": true,
+                                "animals": true,
+                                "animalsBefore": true,
+                                "animalsBeforeText": true,
+                                "text": true
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ShelterForm"
+                            },
+                            "example": {
+                                "name": "string",
+                                "email": "string",
+                                "phone": "string",
+                                "postCode": "string",
+                                "town": "string",
+                                "adress": "string",
+                                "url": "string",
+                                "incomeSource": true,
+                                "lifestyle": true,
+                                "housingType": true,
+                                "houseOwner": true,
+                                "hoursAlone": true,
+                                "floor": true,
+                                "elevator": true,
+                                "walksNumber": true,
+                                "walksTime": true,
+                                "fence": true,
+                                "fenceHeight": true,
+                                "propertySize": true,
+                                "petPlace": true,
+                                "petPlaceAlone": true,
+                                "careAlone": true,
+                                "houseMates": true,
+                                "animals": true,
+                                "animalsBefore": true,
+                                "animalsBeforeText": true,
+                                "text": true
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ShelterForm"
+                            },
+                            "example": {
+                                "name": "string",
+                                "email": "string",
+                                "phone": "string",
+                                "postCode": "string",
+                                "town": "string",
+                                "adress": "string",
+                                "url": "string",
+                                "incomeSource": true,
+                                "lifestyle": true,
+                                "housingType": true,
+                                "houseOwner": true,
+                                "hoursAlone": true,
+                                "floor": true,
+                                "elevator": true,
+                                "walksNumber": true,
+                                "walksTime": true,
+                                "fence": true,
+                                "fenceHeight": true,
+                                "propertySize": true,
+                                "petPlace": true,
+                                "petPlaceAlone": true,
+                                "careAlone": true,
+                                "houseMates": true,
+                                "animals": true,
+                                "animalsBefore": true,
+                                "animalsBeforeText": true,
+                                "text": true
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Shelter/Create": {
+            "post": {
+                "tags": [
+                    "Shelter"
+                ],
+                "summary": "CreateShelterCredentials",
+                "operationId": "CreateShelterCredentials",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Body"
+                            },
+                            "example": "string"
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Body"
+                            },
+                            "example": "string"
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Body"
+                            },
+                            "example": "string"
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Shelter/Login": {
+            "post": {
+                "tags": [
+                    "Shelter"
+                ],
+                "summary": "LoginShelterUser",
+                "operationId": "LoginShelterUser",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ShelterLoginDto"
+                            },
+                            "example": {
+                                "emailShelter": "string",
+                                "passwordShelter": "string"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ShelterLoginDto"
+                            },
+                            "example": {
+                                "emailShelter": "string",
+                                "passwordShelter": "string"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ShelterLoginDto"
+                            },
+                            "example": {
+                                "emailShelter": "string",
+                                "passwordShelter": "string"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Shelter/GetPets": {
+            "get": {
+                "tags": [
+                    "Shelter"
+                ],
+                "summary": "GetAllPetsBelongsToShelter",
+                "operationId": "GetAllPetsBelongsToShelter",
+                "parameters": [
+                    {
+                        "name": "shelterEmail",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Shelter/Get": {
+            "get": {
+                "tags": [
+                    "Shelter"
+                ],
+                "summary": "GetSingleShelter",
+                "operationId": "GetSingleShelter",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Shelter/ResetShelterPasswordRequest": {
+            "post": {
+                "tags": [
+                    "Shelter"
+                ],
+                "summary": "ResetShelterPasswordReq",
+                "operationId": "ResetShelterPasswordReq",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResetPasswordReqModel"
+                            },
+                            "example": {
+                                "email": "string"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResetPasswordReqModel"
+                            },
+                            "example": {
+                                "email": "string"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResetPasswordReqModel"
+                            },
+                            "example": {
+                                "email": "string"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Shelter/ResetShelterPassword": {
+            "post": {
+                "tags": [
+                    "Shelter"
+                ],
+                "summary": "ResetShelterPassword",
+                "operationId": "ResetShelterPassword",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResetPasswordModel"
+                            },
+                            "example": {
+                                "email": "string",
+                                "token": "string",
+                                "newPassword": "string",
+                                "confirmPassword": "string"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResetPasswordModel"
+                            },
+                            "example": {
+                                "email": "string",
+                                "token": "string",
+                                "newPassword": "string",
+                                "confirmPassword": "string"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResetPasswordModel"
+                            },
+                            "example": {
+                                "email": "string",
+                                "token": "string",
+                                "newPassword": "string",
+                                "confirmPassword": "string"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Shelter/GetDogs": {
+            "get": {
+                "tags": [
+                    "Shelter"
+                ],
+                "summary": "GetAllDogsBelongsToShelter",
+                "operationId": "GetAllDogsBelongsToShelter",
+                "parameters": [
+                    {
+                        "name": "shelterEmail",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Shelter/GetCats": {
+            "get": {
+                "tags": [
+                    "Shelter"
+                ],
+                "summary": "GetAllCatsBelongsToShelter",
+                "operationId": "GetAllCatsBelongsToShelter",
+                "parameters": [
+                    {
+                        "name": "shelterEmail",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Shelter/GetRodents": {
+            "get": {
+                "tags": [
+                    "Shelter"
+                ],
+                "summary": "GetAllRodentsBelongsToShelter",
+                "operationId": "GetAllRodentsBelongsToShelter",
+                "parameters": [
+                    {
+                        "name": "shelterEmail",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Test": {
+            "get": {
+                "tags": [
+                    "Test"
+                ],
+                "summary": "/api/Test - GET",
+                "operationId": "get-api-test",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiTestGet200TextPlainResponse"
+                                },
+                                "examples": {
+                                    "default": {
+                                        "value": null
+                                    }
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiTestGet200ApplicationJsonResponse"
+                                },
+                                "example": "string"
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiTestGet200TextJsonResponse"
+                                },
+                                "example": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/User/Register": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "RegisterUser",
+                "operationId": "RegisterUser",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserRegisterDto"
+                            },
+                            "example": {
+                                "name": "string",
+                                "lname": "string",
+                                "email": "string",
+                                "password": "string",
+                                "passwordConfirm": "string",
+                                "phone": "string",
+                                "terms": true
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserRegisterDto"
+                            },
+                            "example": {
+                                "name": "string",
+                                "lname": "string",
+                                "email": "string",
+                                "password": "string",
+                                "passwordConfirm": "string",
+                                "phone": "string",
+                                "terms": true
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserRegisterDto"
+                            },
+                            "example": {
+                                "name": "string",
+                                "lname": "string",
+                                "email": "string",
+                                "password": "string",
+                                "passwordConfirm": "string",
+                                "phone": "string",
+                                "terms": true
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/User/Login": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "LoginUser",
+                "operationId": "LoginUser",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserLoginDto"
+                            },
+                            "example": {
+                                "emailUser": "string",
+                                "passwordUser": "string"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserLoginDto"
+                            },
+                            "example": {
+                                "emailUser": "string",
+                                "passwordUser": "string"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserLoginDto"
+                            },
+                            "example": {
+                                "emailUser": "string",
+                                "passwordUser": "string"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/User/DetailsForm": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "AddUserDetailsForm",
+                "operationId": "AddUserDetailsForm",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserForm"
+                            },
+                            "example": {
+                                "name": "string",
+                                "lname": "string",
+                                "email": "string",
+                                "phone": "string",
+                                "postCode": "string",
+                                "town": "string",
+                                "adress": "string",
+                                "incomeSource": "string",
+                                "lifestyle": "string",
+                                "housingType": "string",
+                                "houseOwner": "string",
+                                "hoursAlone": 0,
+                                "floor": "string",
+                                "elevator": "string",
+                                "walksNumber": 0,
+                                "walksTime": 0,
+                                "fence": "string",
+                                "fenceHeight": "string",
+                                "propertySize": "string",
+                                "petPlace": "string",
+                                "petPlaceAlone": "string",
+                                "careAlone": "string",
+                                "houseMates": "string",
+                                "animals": "string",
+                                "animalsBefore": "string",
+                                "animalsBeforeText": "string",
+                                "text": "string"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserForm"
+                            },
+                            "example": {
+                                "name": "string",
+                                "lname": "string",
+                                "email": "string",
+                                "phone": "string",
+                                "postCode": "string",
+                                "town": "string",
+                                "adress": "string",
+                                "incomeSource": "string",
+                                "lifestyle": "string",
+                                "housingType": "string",
+                                "houseOwner": "string",
+                                "hoursAlone": 0,
+                                "floor": "string",
+                                "elevator": "string",
+                                "walksNumber": 0,
+                                "walksTime": 0,
+                                "fence": "string",
+                                "fenceHeight": "string",
+                                "propertySize": "string",
+                                "petPlace": "string",
+                                "petPlaceAlone": "string",
+                                "careAlone": "string",
+                                "houseMates": "string",
+                                "animals": "string",
+                                "animalsBefore": "string",
+                                "animalsBeforeText": "string",
+                                "text": "string"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserForm"
+                            },
+                            "example": {
+                                "name": "string",
+                                "lname": "string",
+                                "email": "string",
+                                "phone": "string",
+                                "postCode": "string",
+                                "town": "string",
+                                "adress": "string",
+                                "incomeSource": "string",
+                                "lifestyle": "string",
+                                "housingType": "string",
+                                "houseOwner": "string",
+                                "hoursAlone": 0,
+                                "floor": "string",
+                                "elevator": "string",
+                                "walksNumber": 0,
+                                "walksTime": 0,
+                                "fence": "string",
+                                "fenceHeight": "string",
+                                "propertySize": "string",
+                                "petPlace": "string",
+                                "petPlaceAlone": "string",
+                                "careAlone": "string",
+                                "houseMates": "string",
+                                "animals": "string",
+                                "animalsBefore": "string",
+                                "animalsBeforeText": "string",
+                                "text": "string"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/User/ResetPasswordRequest": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "ResetPasswordReq",
+                "operationId": "ResetPasswordReq",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResetPasswordReqModel"
+                            },
+                            "example": {
+                                "email": "string"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResetPasswordReqModel"
+                            },
+                            "example": {
+                                "email": "string"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResetPasswordReqModel"
+                            },
+                            "example": {
+                                "email": "string"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/User/ResetPassword": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "ResetUserPassword",
+                "operationId": "ResetUserPassword",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResetPasswordModel"
+                            },
+                            "example": {
+                                "email": "string",
+                                "token": "string",
+                                "newPassword": "string",
+                                "confirmPassword": "string"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResetPasswordModel"
+                            },
+                            "example": {
+                                "email": "string",
+                                "token": "string",
+                                "newPassword": "string",
+                                "confirmPassword": "string"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResetPasswordModel"
+                            },
+                            "example": {
+                                "email": "string",
+                                "token": "string",
+                                "newPassword": "string",
+                                "confirmPassword": "string"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/User/Get": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "GetSingleUser",
+                "operationId": "GetSingleUser",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Pet/GetSingle": {
+            "get": {
+                "tags": [
+                    "Pet"
+                ],
+                "summary": "GetSinglePetById",
+                "operationId": "GetSinglePetById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Format - int32.",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Pet/AddLikedPets": {
+            "post": {
+                "tags": [
+                    "Pet"
+                ],
+                "summary": "AddPetsLikedByUser",
+                "operationId": "AddPetsLikedByUser",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LikedPetListModel"
+                            },
+                            "example": {
+                                "userEmail": "string",
+                                "likedPetIds": [
+                                    0
+                                ]
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LikedPetListModel"
+                            },
+                            "example": {
+                                "userEmail": "string",
+                                "likedPetIds": [
+                                    0
+                                ]
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LikedPetListModel"
+                            },
+                            "example": {
+                                "userEmail": "string",
+                                "likedPetIds": [
+                                    0
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Pet/AllRodents": {
+            "get": {
+                "tags": [
+                    "Pet"
+                ],
+                "summary": "GetAllRodents",
+                "operationId": "GetAllRodents",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Pet/AllDogs": {
+            "get": {
+                "tags": [
+                    "Pet"
+                ],
+                "summary": "GetAllDogs",
+                "operationId": "GetAllDogs",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Pet/AllCats": {
+            "get": {
+                "tags": [
+                    "Pet"
+                ],
+                "summary": "GetAllCats",
+                "operationId": "GetAllCats",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Pet/AllOthersPets": {
+            "get": {
+                "tags": [
+                    "Pet"
+                ],
+                "summary": "GetAllOthersPets",
+                "operationId": "GetAllOthersPets",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Shelter/GetOthers": {
+            "get": {
+                "tags": [
+                    "Shelter"
+                ],
+                "summary": "GetAllOthersBelongsToShelter",
+                "operationId": "GetAllOthersBelongsToShelter",
+                "parameters": [
+                    {
+                        "name": "shelterEmail",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/User/LikedPets": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "GetLikedPetsByUser",
+                "operationId": "GetLikedPetsByUser",
+                "parameters": [
+                    {
+                        "name": "userEmail",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/User/Delete": {
+            "delete": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Delete User",
+                "operationId": "Delete-User",
+                "parameters": [
+                    {
+                        "name": "userEmail",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/User/UsersWhoLikedPets": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "GetAllUsersWhoLikedPet",
+                "operationId": "GetAllUsersWhoLikedPet",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Format - int32.",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "LikedPetListModel": {
+                "type": "object",
+                "properties": {
+                    "userEmail": {
+                        "type": "string"
+                    },
+                    "likedPetIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ResetPasswordModel": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "token": {
+                        "type": "string"
+                    },
+                    "newPassword": {
+                        "type": "string"
+                    },
+                    "confirmPassword": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ResetPasswordReqModel": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ShelterForm": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "string"
+                    },
+                    "postCode": {
+                        "type": "string"
+                    },
+                    "town": {
+                        "type": "string"
+                    },
+                    "adress": {
+                        "type": "string"
+                    },
+                    "url": {
+                        "type": "string"
+                    },
+                    "incomeSource": {
+                        "type": "boolean"
+                    },
+                    "lifestyle": {
+                        "type": "boolean"
+                    },
+                    "housingType": {
+                        "type": "boolean"
+                    },
+                    "houseOwner": {
+                        "type": "boolean"
+                    },
+                    "hoursAlone": {
+                        "type": "boolean"
+                    },
+                    "floor": {
+                        "type": "boolean"
+                    },
+                    "elevator": {
+                        "type": "boolean"
+                    },
+                    "walksNumber": {
+                        "type": "boolean"
+                    },
+                    "walksTime": {
+                        "type": "boolean"
+                    },
+                    "fence": {
+                        "type": "boolean"
+                    },
+                    "fenceHeight": {
+                        "type": "boolean"
+                    },
+                    "propertySize": {
+                        "type": "boolean"
+                    },
+                    "petPlace": {
+                        "type": "boolean"
+                    },
+                    "petPlaceAlone": {
+                        "type": "boolean"
+                    },
+                    "careAlone": {
+                        "type": "boolean"
+                    },
+                    "houseMates": {
+                        "type": "boolean"
+                    },
+                    "animals": {
+                        "type": "boolean"
+                    },
+                    "animalsBefore": {
+                        "type": "boolean"
+                    },
+                    "animalsBeforeText": {
+                        "type": "boolean"
+                    },
+                    "text": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ShelterLoginDto": {
+                "type": "object",
+                "properties": {
+                    "emailShelter": {
+                        "type": "string"
+                    },
+                    "passwordShelter": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "UserForm": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "lname": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "string"
+                    },
+                    "postCode": {
+                        "type": "string"
+                    },
+                    "town": {
+                        "type": "string"
+                    },
+                    "adress": {
+                        "type": "string"
+                    },
+                    "incomeSource": {
+                        "type": "string"
+                    },
+                    "lifestyle": {
+                        "type": "string"
+                    },
+                    "housingType": {
+                        "type": "string"
+                    },
+                    "houseOwner": {
+                        "type": "string"
+                    },
+                    "hoursAlone": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "floor": {
+                        "type": "string"
+                    },
+                    "elevator": {
+                        "type": "string"
+                    },
+                    "walksNumber": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "walksTime": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "fence": {
+                        "type": "string"
+                    },
+                    "fenceHeight": {
+                        "type": "string"
+                    },
+                    "propertySize": {
+                        "type": "string"
+                    },
+                    "petPlace": {
+                        "type": "string"
+                    },
+                    "petPlaceAlone": {
+                        "type": "string"
+                    },
+                    "careAlone": {
+                        "type": "string"
+                    },
+                    "houseMates": {
+                        "type": "string"
+                    },
+                    "animals": {
+                        "type": "string"
+                    },
+                    "animalsBefore": {
+                        "type": "string"
+                    },
+                    "animalsBeforeText": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "UserLoginDto": {
+                "type": "object",
+                "properties": {
+                    "emailUser": {
+                        "type": "string"
+                    },
+                    "passwordUser": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "UserRegisterDto": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "lname": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "passwordConfirm": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "string"
+                    },
+                    "terms": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "Body": {
+                "type": "string"
+            },
+            "ApiTestGet200TextPlainResponse": {
+                "type": "string"
+            },
+            "ApiTestGet200ApplicationJsonResponse": {
+                "type": "string"
+            },
+            "ApiTestGet200TextJsonResponse": {
+                "type": "string"
+            }
+        },
+        "securitySchemes": {
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "name": "Ocp-Apim-Subscription-Key",
+                "in": "header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "name": "subscription-key",
+                "in": "query"
+            }
+        }
+    },
+    "security": [
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyQuery": []
+        }
+    ]
+}

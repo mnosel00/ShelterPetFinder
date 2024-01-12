@@ -19,4 +19,9 @@
 
 * [Dokumentacja](dokumentacja/README.md)
   * [API](dokumentacja/api/README.md)
+    * [Shelter](dokumentacja/api/shelter.md)
+    * [Pet](dokumentacja/api/pet.md)
     * [User](dokumentacja/api/user.md)
+  * [Baza Danych](dokumentacja/baza-danych/README.md)
+    * [User](dokumentacja/baza-danych/user.md)
+    * [Pet i Shelter](dokumentacja/baza-danych/pet-i-shelter.md)

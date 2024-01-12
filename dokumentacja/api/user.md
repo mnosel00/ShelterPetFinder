@@ -4,88 +4,46 @@
 POST
 {% endhint %}
 
-<details>
+{% swagger src="../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json" path="/User/Register" method="post" %}
+[API Aplikacji ShelterPetFinder.openapi+json (2).json](<../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json>)
+{% endswagger %}
 
-<summary>/User/Register</summary>
+{% swagger src="../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json" path="/User/Login" method="post" %}
+[API Aplikacji ShelterPetFinder.openapi+json (2).json](<../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json>)
+{% endswagger %}
 
+{% swagger src="../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json" path="/User/DetailsForm" method="post" %}
+[API Aplikacji ShelterPetFinder.openapi+json (2).json](<../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json>)
+{% endswagger %}
 
+{% swagger src="../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json" path="/User/ResetPasswordRequest" method="post" %}
+[API Aplikacji ShelterPetFinder.openapi+json (2).json](<../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json>)
+{% endswagger %}
 
-</details>
-
-<details>
-
-<summary>/User/Login</summary>
-
-
-
-</details>
-
-<details>
-
-<summary>/User/DetailsForm</summary>
-
-
-
-</details>
-
-<details>
-
-<summary>/User/ResetPasswordRequest</summary>
-
-
-
-</details>
-
-<details>
-
-<summary>/User/ResetPassword</summary>
-
-
-
-</details>
-
-{% hint style="danger" %}
-DELETE
-{% endhint %}
-
-<details>
-
-<summary>/User/Delete</summary>
-
-
-
-</details>
+{% swagger src="../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json" path="/User/ResetPassword" method="post" %}
+[API Aplikacji ShelterPetFinder.openapi+json (2).json](<../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json>)
+{% endswagger %}
 
 {% hint style="info" %}
 GET
 {% endhint %}
 
-{% swagger method="get" path="" baseUrl="" summary="" %}
-{% swagger-description %}
-
-{% endswagger-description %}
+{% swagger src="../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json" path="/User/Get" method="get" %}
+[API Aplikacji ShelterPetFinder.openapi+json (2).json](<../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json>)
 {% endswagger %}
 
-<details>
+{% swagger src="../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json" path="/User/LikedPets" method="get" %}
+[API Aplikacji ShelterPetFinder.openapi+json (2).json](<../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json>)
+{% endswagger %}
 
-<summary>/User/UsersWhoLikedPets</summary>
+{% swagger src="../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json" path="/User/UsersWhoLikedPets" method="get" %}
+[API Aplikacji ShelterPetFinder.openapi+json (2).json](<../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json>)
+{% endswagger %}
 
+{% hint style="danger" %}
+DELETE
+{% endhint %}
 
-
-</details>
-
-<details>
-
-<summary>/User/Get</summary>
-
-
-
-</details>
-
-<details>
-
-<summary>/User/LikedPets</summary>
-
-
-
-</details>
+{% swagger src="../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json" path="/User/Delete" method="delete" %}
+[API Aplikacji ShelterPetFinder.openapi+json (2).json](<../../.gitbook/assets/API Aplikacji ShelterPetFinder.openapi+json (2).json>)
+{% endswagger %}
