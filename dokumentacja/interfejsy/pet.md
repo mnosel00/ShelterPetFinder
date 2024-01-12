@@ -1,11 +1,11 @@
 # Pet
 
-```apex
+```csharp
 public interface IPetService
 {
     Task<bool> AddPetForm(PetForm pet);
     Task<bool> UpdatePet(PetForm pet);
-    Task <bool> DeletePet(int id);
+    Task<bool> DeletePet(int id);
     Task<List<PetsBelongsToShelterDto>> GetAllPets();
     Task<List<PetsBelongsToShelterDto>> GetAllDogs();
     Task<List<PetsBelongsToShelterDto>> GetAllCats();
