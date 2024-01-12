@@ -29,3 +29,6 @@
     * [Pet](dokumentacja/interfejsy/pet.md)
     * [User](dokumentacja/interfejsy/user.md)
     * [Shelter](dokumentacja/interfejsy/shelter.md)
+  * [Wymagania środowiskowe](dokumentacja/wymagania-srodowiskowe.md)
+  * [Wymagania sprzętowe](dokumentacja/wymagania-sprzetowe.md)
+  * [Usługi chmurowe](dokumentacja/uslugi-chmurowe.md)
