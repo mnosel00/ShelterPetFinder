@@ -25,3 +25,7 @@
   * [Baza Danych](dokumentacja/baza-danych/README.md)
     * [User](dokumentacja/baza-danych/user.md)
     * [Pet i Shelter](dokumentacja/baza-danych/pet-i-shelter.md)
+  * [Interfejsy](dokumentacja/interfejsy/README.md)
+    * [Pet](dokumentacja/interfejsy/pet.md)
+    * [User](dokumentacja/interfejsy/user.md)
+    * [Shelter](dokumentacja/interfejsy/shelter.md)
