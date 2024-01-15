@@ -76,3 +76,124 @@ namespace shelter.Interfaces.Pet
 
 }
 ```
+
+***
+
+
+
+### LikedPetListModel
+
+Klasa `LikedPetListModel` jest modelem danych używanym do przechowywania informacji dotyczących zwierząt, które zostały polubione przez użytkownika. Służy do gromadzenia adresu e-mail użytkownika, oraz  przypisanych do tego emaila, listy identyfikatorów zwierząt, które uzyskały jego polubienie.
+
+#### 1. userEmail
+
+* Typ: `string`
+* Opis: Reprezentuje adres e-mail użytkownika, który polubił zwierzęta.
+
+#### 2. likedPetIds
+
+* Typ: `List<int>`
+* Opis: Reprezentuje listę identyfikatorów zwierząt, które zostały polubione przez użytkownika. Każdy identyfikator jest liczbą całkowitą.
+
+***
+
+
+
+### PetForm
+
+Klasa `PetForm` jest modelem danych reprezentującym informacje związane z zwierzakiem. Stworzona jest przedewszystkim do przechowywania szczegółów dotyczących zwierząt, takich jak ich identyfikator, imię, rodzaj, płeć oraz różne inne atrybuty.&#x20;
+
+#### 1. Id
+
+* Typ: `int?`
+* Opis: Reprezentuje unikalny identyfikator zwierzęcia.
+
+#### 2. Name
+
+* Typ: `string?`
+* Opis: Reprezentuje imię zwierzęcia.
+
+#### 3. Images
+
+* Typ: `List<string>?`
+* Opis: Reprezentuje obrazów w postaci String Base64 związanych ze zwierzęciem. Jest oznaczone adnotacją `[FromForm(Name = "images[]")]` w celu poprawnego przypisania modelu z formularza.
+
+#### 4. Type
+
+* Typ: `string?`
+* Opis: Reprezentuje rodzaj lub gatunek zwierzęcia (np. pies, kot).
+
+#### 5. Gender
+
+* Typ: `string?`
+* Opis: Reprezentuje płeć zwierzęcia.
+
+#### 6. Castration
+
+* Typ: `string?`
+* Opis: Reprezentuje status kastracji zwierzęcia.
+
+#### 7. Breed
+
+* Typ: `string?`
+* Opis: Reprezentuje rasę lub mieszankę ras zwierzęcia.
+
+#### 8. Size
+
+* Typ: `string?`
+* Opis: Reprezentuje kategorię rozmiaru zwierzęcia (np. mały, średni, duży).
+
+#### 9. Age
+
+* Typ: `string?`
+* Opis: Reprezentuje wiek lub zakres wieku zwierzęcia.
+
+#### 10. Vaccination
+
+* Typ: `string?`
+* Opis: Reprezentuje status szczepień zwierzęcia.
+
+#### 11. ChildFriendly
+
+* Typ: `string?`
+* Opis: Reprezentuje przyjazność dla dzieci zwierzęcia.
+
+#### 12. BasicTraining
+
+* Typ: `string?`
+* Opis: Reprezentuje poziom wyszkolenia zwierzaka
+
+#### 13. Activity
+
+* Typ: `string?`
+* Opis: Reprezentuje poziom aktywności zwierzęcia.
+
+#### 14. OtherDogs
+
+* Typ: `string?`
+* Opis: Reprezentuje informacje czy w pobliżu znajdują się inne psy
+
+#### 15. OtherCats
+
+* Typ: `string?`
+* Opis: Reprezentuje informacje czy w pobliżu znajdują się inne koty
+
+#### 16. Cuddly
+
+* Typ: `string?`
+* Opis: Reprezentuje skłonność do przytulania się lub uczucie miłości zwierzęcia.
+
+#### 17. Temper
+
+* Typ: `string?`
+* Opis: Reprezentuje ogólny temperament zwierzęcia.
+
+#### 18. Text
+
+* Typ: `string?`
+* Opis: Dodatkowy tekst lub opis związany ze zwierzęciem.
+
+#### 19. ShelterEmail
+
+* Typ: `string?`
+* Opis: Reprezentuje adres e-mail schroniska lub organizacji zarządzającej zwierzęciem.
